@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args) =>{
       .setAuthor(`Outros`)
       .setDescription(`*Comandos que são "aleatorios" que podem te ajudar ou não. Comandos que não se encaixam nas outras categorias!* \n
 \n**${prefix}ajuda** - Ira te mandar a lista de comandos.
-**${prefix}botinfo** - Ira mostrar as informaçoes de min. 
+**${prefix}botinfo** - Ira mostrar as informaçoes de mim. 
 **${prefix}avatar** @usuário - Ira mostrar o avatar de um usuário.
 **${prefix}uptime** - Ira mostrar o tempo que o bot esta online.
 **${prefix}convite** - Ira mostrar o convite do servidor para suporte e invite do bot.
