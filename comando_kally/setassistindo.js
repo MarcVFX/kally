@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) =>{
         
        
       client.user.setPresence({ game: { name: mensg, type: 3 } });
-      message.reply('o bot esta assistindo ' + mensg)
+      message.reply(`o bot esta assistindo ${mensg}`)
       console.log('O bot esta assistindo ' + mensg)
 
    }
