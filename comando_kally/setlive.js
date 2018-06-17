@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) =>{
         
        
       client.user.setPresence({ game: { name: mensg, url: 'https://twitch.tv/LockDzn' , type: 1 } });
-      message.reply('o bot esta transmitindo ' + mensg)
+      message.reply(`o bot esta transmitindo ${mensg}`)
       console.log('O bot esta transmitindo ' + mensg)
 
    }
