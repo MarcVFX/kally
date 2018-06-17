@@ -16,9 +16,8 @@ console.log('CONECTADO! BOT ONLINE!');
 console.log(`O meu prefixo é ${prefix}`);
 console.log('==============================');
   
-//let gameloop = require(`./comando_kally/gameloop.js`);
-//gameloop.run(client);
-client.user.setPresence({ game: { name: `Brasil x Suíça - Brasil wins!`, type: 3} });
+let gameloop = require(`./comando_kally/gameloop.js`);
+gameloop.run(client);
   
 });
 
