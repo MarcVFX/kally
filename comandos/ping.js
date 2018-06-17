@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) =>{
         const ping_API = async() => {
             await sleep(5000)
     
-            if(Math.round(client.ping) <= 50){
+            if(Math.round(client.ping) <= 100){
                 const pingbom = new Discord.RichEmbed()
                     .setColor("0cff00")
     
@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) =>{
                 m.delete();
                 return;
             }
-            if(Math.round(client.ping) <= 120){
+            if(Math.round(client.ping) <= 250){
                 const pingbom = new Discord.RichEmbed()
                     .setColor("4faa17")
     
@@ -66,7 +66,7 @@ module.exports.run = async (client, message, args) =>{
     const ping_ping = async() => {
         await sleep(5000)
 
-        if(m.createdTimestamp - message.createdTimestamp <= 50){
+        if(m.createdTimestamp - message.createdTimestamp <= 100){
             const pingbom = new Discord.RichEmbed()
                 .setColor("0cff00")
 
@@ -78,7 +78,7 @@ module.exports.run = async (client, message, args) =>{
             m.delete();
             return;
         }
-        if(m.createdTimestamp - message.createdTimestamp <= 120){
+        if(m.createdTimestamp - message.createdTimestamp <= 250){
             const pingbom = new Discord.RichEmbed()
                 .setColor("4faa17")
 
