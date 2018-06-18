@@ -33,8 +33,9 @@ client.on("guildCreate", guild => {
 			.setAuthor(`${guild.name} | Adicionado`)
 			.setDescription(`Entrei no servidor **${guild.name}** (id: ${guild.id})`)
 			.addField("Membros", `Com **${guild.memberCount}** membros`)
-			.addField("Dono", `${guild.owner} (ID: ${guild.owner.id})`)
+			.addField("Dono", `${guild.owner.tag} (ID: ${guild.owner.id})`)
 			.setColor("00e7ff")
+			.setFooter(`Agora estou em ${client.guilds.size} servidores!`, guild.owner.avatarURL)
   
 	
 	 	client.channels.get("429844744110211072").send(entrei);
@@ -47,8 +48,9 @@ client.on("guildDelete", guild => {
      .setAuthor(`${guild.name} | Removido`)
      .setDescription(`Fui removido do servidor **${guild.name}** (ID: ${guild.id})!`)
      .addField("Membros", `Com **${guild.memberCount}** membros`)
-     .addField("Dono", `${guild.owner} (ID: ${guild.owner.id})`)
+     .addField("Dono", `${guild.owner.tag} (ID: ${guild.owner.id})`)
      .setColor("ff0000")
+     .setFooter(`Agora estou em ${client.guilds.size} servidores!`, guild.owner.avatarURL)
   
  
   
