@@ -38,7 +38,7 @@ client.on("guildCreate", guild => {
 			.setFooter(`Agora estou em ${client.guilds.size} servidores!`, guild.owner.avatarURL)
   
 	
-	 	client.channels.get("429844744110211072").send(entrei);
+	 	client.channels.get("458341973955313675").send(entrei);
 	
 	}
 });
@@ -54,7 +54,7 @@ client.on("guildDelete", guild => {
   
  
   
-  client.channels.get("429844744110211072").send(entrei);
+  client.channels.get("458341973955313675").send(entrei);
 });
 
 
@@ -133,7 +133,7 @@ if(!message.content.startsWith(prefix)) return;
 		
 	.setTimestamp()
 	.setFooter(`Servidor: ${message.guild.name} e Canal: ${message.channel.name}`, message.guild.iconURL)
-    client.channels.get("432603458269609986").send(cmd);
+    client.channels.get("458342361370591252").send(cmd);
 	  
    } catch (err) {
      
@@ -146,7 +146,7 @@ if(!message.content.startsWith(prefix)) return;
 	
 	 .setTimestamp()
 	 .setFooter(`Servidor: ${message.guild.name} e Canal: ${message.channel.name}`, message.guild.iconURL)
-     client.channels.get("429844583766294530").send(erro2);
+     client.channels.get("458342713717293088").send(erro2);
    }
   
 });
@@ -174,13 +174,13 @@ client.on('message', message =>{
 		let commandFile = require(`./comando_kally/${command}.js`);
 			commandFile.run(client, message, args);
 			const cmd = new Discord.RichEmbed()
-				.setAuthor(`k!${command}`, message.author.avatarURL)
+				.setAuthor(`k+${command}`, message.author.avatarURL)
 				.setDescription("\n**EXECUTADO POR " + message.author.tag + "**\n```k!" + command + " " + allargs + "```")
 				.setColor("dd1956")
 			
 				.setTimestamp()
 				.setFooter(`Servidor: ${message.guild.name}`, message.guild.iconURL)
-			client.channels.get("432603458269609986").send(cmd);
+			client.channels.get("458342361370591252").send(cmd);
 	   } catch (err) {
 		
 			console.error("COMANDO NÃO ENCONTRADO!")
