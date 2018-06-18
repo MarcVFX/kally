@@ -175,7 +175,7 @@ client.on('message', message =>{
 			commandFile.run(client, message, args);
 			const cmd = new Discord.RichEmbed()
 				.setAuthor(`k+${command}`, message.author.avatarURL)
-				.setDescription("\n**EXECUTADO POR " + message.author.tag + "**\n```k!" + command + " " + allargs + "```")
+				.setDescription("\n**EXECUTADO POR " + message.author.tag + "**\n```k+" + command + " " + allargs + "```")
 				.setColor("dd1956")
 			
 				.setTimestamp()
