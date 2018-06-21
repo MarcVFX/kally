@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) =>{
 
        const categoria = new Discord.RichEmbed()
         .setAuthor(`Escolha uma categoria...`)
-        .setDescription("\n**👮 Moderação**\n• `ban`, `mute`, `anuncio`, `limpar`, `kick`...\n\n**📋 Outros**\n• `serverinfo`, `avatar`, `convite`, `avatar`, `say`...")
+        .setDescription("\n**👮 Moderação** (7 comandos)\n• `ban`, `mute`, `anuncio`, `limpar`, `kick`...\n\n**📋 Outros** (11 comandos)\n• `serverinfo`, `avatar`, `convite`, `avatar`, `say`...")
         .setColor("#139ec7")
 
        const ajuda2 = new Discord.RichEmbed()
