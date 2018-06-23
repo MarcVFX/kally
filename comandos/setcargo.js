@@ -48,7 +48,7 @@ module.exports.run = async (client, message, args) =>{
         .setTitle("🔧 CHANGELOG")
         .setDescription(member+ " adicionado como " +role+"!")
         .setColor(role.color)
-        .setFooter(`Por: ${member.author.tag} - © Kally 🔧 Change-log`)   
+        .setFooter(`Por: ${message.author.tag} - © Kally 🔧 Change-log`)   
       guild.send(changelog) 
    }
    if(message.guild.channels.find("name", "change-log")){
@@ -57,7 +57,7 @@ module.exports.run = async (client, message, args) =>{
       .setTitle("🔧 CHANGE-LOG")
       .setDescription(member+ " adicionado como " +role+"!")
       .setColor(role.color)
-      .setFooter(`Por: ${member.author.tag} - © Kally 🔧 Change-log`)    
+      .setFooter(`Por: $message.author.tag} - © Kally 🔧 Change-log`)    
     guild.send(changelog) 
    }
    if(message.guild.channels.find("name", "🔧change-log")){
@@ -66,7 +66,7 @@ module.exports.run = async (client, message, args) =>{
       .setTitle(":wrench: CHANGE-LOG")
       .setDescription(member+ " adicionado como " +role+"!")
       .setColor(role.color)
-      .setFooter(`Por: ${member.author.tag} - © Kally 🔧 Change-log`)  
+      .setFooter(`Por: ${message.author.tag} - © Kally 🔧 Change-log`)  
     guild.send(changelog) 
    }
    if(message.guild.channels.find("name", "🔧changelog")){
@@ -75,7 +75,7 @@ module.exports.run = async (client, message, args) =>{
       .setTitle(":wrench: CHANGELOG")
       .setDescription(member+ " adicionado como "+role+"!")
       .setColor(role.color)
-      .setFooter(`Por: ${member.author.tag} - © Kally 🔧 Change-log`)  
+      .setFooter(`Por: ${message.author.tag} - © Kally 🔧 Change-log`)  
     guild.send(changelog) 
    }
    }else {
