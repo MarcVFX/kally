@@ -53,7 +53,7 @@ module.exports.run = async (client, message, args) =>{
                 .setColor("#00f782")
                 .setFooter("© Kally Outros")
 
-    message.author.send(ajuda1).catch(error => message.reply(`ops! Seu privado está desativado e não consigo enviar a ajuda. :worried:`).then(msg => msg.delete(5000)));
+    message.author.send(ajuda1).catch(error => message.reply(`ops! Seu privado está desativado e não consigo enviar a ajuda. :worried:`).then(msg => msg.delete(8000)));
     message.author.send(categoria).then(msg=> {
         msg.react("👮").then(r => {
             msg.react("📋")
@@ -65,10 +65,10 @@ module.exports.run = async (client, message, args) =>{
             const outrosl = msg.createReactionCollector(outros, { time: 60000 });
 
             modl.on('collect', r=> {
-                message.author.send(ajuda2).catch(error => message.reply(`ops! Seu privado está desativado e não consigo enviar a ajuda. :worried:`).then(msg => msg.delete(5000)));
+                message.author.send(ajuda2).catch(error => message.reply(`ops! Seu privado está desativado e não consigo enviar a ajuda. :worried:`).then(msg => msg.delete(8000)));
             })
             outrosl.on('collect', r=> {
-                message.author.send(ajuda3).catch(error => message.reply(`ops! Seu privado está desativado e não consigo enviar a ajuda. :worried:`).then(msg => msg.delete(5000)));
+                message.author.send(ajuda3).catch(error => message.reply(`ops! Seu privado está desativado e não consigo enviar a ajuda. :worried:`).then(msg => msg.delete(8000)));
             })
         })
     }).catch(O_o=>{});
