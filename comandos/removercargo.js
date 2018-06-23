@@ -48,7 +48,7 @@ module.exports.run = async (client, message, args) =>{
         .setTitle("🔧 CHANGELOG")
         .setDescription(member+ " foi removido de " +role+"!")
         .setColor(role.color)
-        .setFooter(`Por: ${message.member.tag} - © Kally 🔧 Change-log`)
+        .setFooter(`Por: ${message.author.tag} - © Kally 🔧 Change-log`)
       guild.send(changelog) 
    }
    if(message.guild.channels.find("name", "change-log")){
