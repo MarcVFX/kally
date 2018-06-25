@@ -30,7 +30,8 @@ module.exports.run = async (client, message, args) =>{
 **${prefix}anuncio** \`mensagem do anuncio\` - Irá mandar um anuncio no chat que o comandos foi executado.
 **${prefix}limpar** \`número de mensagens\` - Irá limpar o número de mensagens escolhido.
 **${prefix}kick** \`@usuário e motivo\` - Irá kickar o usuário mencionado.
-**${prefix}aviso** \`@usuário e motivo\` - Irá avisar o usuário mencionado.`)
+**${prefix}aviso** \`@usuário e motivo\` - Irá avisar o usuário mencionado.
+**${prefix}chat** \`@usuário e motivo\` - Irá mutar ou desmutar o chat.`)
             .setThumbnail("https://i.imgur.com/ZmWM1UT.png")
             .setColor("#ff0000")
             .setFooter("© Kally Moderação")
