@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args) =>{
 **${prefix}limpar** \`número de mensagens\` - Irá limpar o número de mensagens escolhido.
 **${prefix}kick** \`@usuário e motivo\` - Irá kickar o usuário mencionado.
 **${prefix}aviso** \`@usuário e motivo\` - Irá avisar o usuário mencionado.
-**${prefix}chat** \`@usuário e motivo\` - Irá mutar ou desmutar o chat.`)
+**${prefix}chat** \`<on ou off>\` - Irá mutar ou desmutar o chat.`)
             .setThumbnail("https://i.imgur.com/ZmWM1UT.png")
             .setColor("#ff0000")
             .setFooter("© Kally Moderação")
