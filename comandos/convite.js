@@ -7,10 +7,10 @@ module.exports.run = async (client, message, args) =>{
       const convite = new Discord.RichEmbed()
         .setColor("#1297f0")
         .setAuthor("Convite", client.user.avatarURL)
-        
-        .setDescription(`Convite para servidor de suporte do Kally: https://discord.gg/fsSNJJH \n\nInvite para colocar o Kally no seu servidor: https://kally.glitch.me/invite.html`)
+        .addField("Convite para servidor de suporte do Kally:", "https://discord.gg/fsSNJJH")
+        .addField("Invite para colocar o Kally no seu servidor:", "https://kally.glitch.me/invite.html")
 
-      message.author.send(convite)
+      message.author.send(convite).catch(error => message.reply(`ops! Seu privado está desativado e não consigo enviar o convite. :worried:`).then(msg => msg.delete(8000)));
   
 
    
