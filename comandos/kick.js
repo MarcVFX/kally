@@ -37,8 +37,8 @@ module.exports.run = async (client, message, args) =>{
      
       
     const kikado = new Discord.RichEmbed()
-        .setTitle(`${message.author.tag} | Expulso`)
-        .setDescription(`**${member.user.username}** foi expulso do servidor! :worried:`)
+        .setTitle(`${member.user.tag} | Expulso`)
+        .setDescription(`**${member.user.tag}** foi expulso do servidor! :worried:`)
         .setColor("#aa0303")
         .setThumbnail(message.author.avatarURL)
         .addField("👮 Por:", message.author)
