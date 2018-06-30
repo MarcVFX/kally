@@ -2,93 +2,89 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) =>{
 
-   if (message.member.hasPermission('MANAGE_MESSAGES')) {
-    if (!message.guild.roles.find("name", "Mutado") || message.guild.roles.find("name", "mutado")) {
-        const norole = new Discord.RichEmbed()
-           .setColor("ff0000")
-           .setAuthor('Deu um erro', client.user.avatarURL)
-           
-           .setDescription(`O cargo **Mutado** não foi encontrado. :slight_frown: 
-Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
-        
-           .addField("Info", "Coloque o cargo **Mutado** em cima dos cargo que eu vou poder mutar e coloque o cargo do bot (**Cargo chama Kally**) em cima do cargo **Mutado**! Obrigado.")
-           .setTimestamp()
-           .setFooter("© Kallyᴮᴱᵀᴬ ERRO", message.author.avatarURL)
-        
-        message.channel.send(message.author, norole)
-        return;
-        
-    }
-   message.delete().catch(O_o=>{});
-   const comousar = new Discord.RichEmbed()
+    message.delete().catch(O_o=>{});
+    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply("você não tem permissão! :x:").then(msg => msg.delete(6000));
+    const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!mute")
-      .setDescription(`Ira mutar o usuário mencionado.`)
+      .setDescription(`Irá banir o usuário mencionado.`)
       .setColor("#60d1f6")
       .setFooter("© Kally - kally.glitch.me")
       .addField("Como usar", "`k!mute @usuário <motivo>`")
-      .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Gerenciar mensagens`")
+      .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Gerenciar Mensagens`")
+    let member = message.mentions.members.first();
+    if(!member)
+        return message.channel.send(message.author, comousar).then(msg => msg.delete(10000));
 
-   let member = message.mentions.members.first();
-   if(!member)
-      return message.channel.send(message.author, comousar).then(msg => msg.delete(10000));
 
-   let motivo = args.slice(1).join(' ');
-   if(!motivo)
-      return message.reply("por favor, indique um motivo para o mute!").then(msg => msg.delete(10000));
-
-   if (!message.guild.roles.find("name", "Mutado") || message.guild.roles.find("name", "mutado")) {
-      
-      const norole = new Discord.RichEmbed()
-         .setColor("ff0000")
-         .setAuthor('Deu um erro', client.user.avatarURL)
-         
-         .setDescription(`O cargo **Mutado** não foi encontrado. :slight_frown: 
-Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
-      
-         .addField("Info", "Coloque o cargo **Mutado** em cima dos cargo que eu vou poder mutar e coloque o cargo do bot (**Cargo chama Kally**) em cima do cargo **Mutado**! Obrigado.")
-         .setTimestamp()
-         .setFooter("© Kallyᴮᴱᵀᴬ ERRO", message.author.avatarURL)
-      
-      message.channel.send(message.author, norole)
-      
-      
-     } else {
-        let role = message.guild.roles.find("name", "Mutado");
-        member.addRole(role)
-        
-        const mutemsg = new Discord.RichEmbed()
-          .setAuthor('Você foi mutado!', member.user.avatarURL)
-          .setColor("ff0000")
-
-          .setThumbnail(member.user.avatarURL)
-
-          .setTimestamp()
-          .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
-
-          .addField("Motivo:", motivo)
-
-          .addField("Servidor:", message.guild.name)  
+    let motivo = args.slice(1).join(' ');
+    if(!motivo) motivo = "Não informado";
   
-       member.send(mutemsg)
+    let muterole = message.guild.roles.find("name", "Mutado");
+    if(!muterole){
+        try {
+            muterole = await message.guild.createRole({
+                name: "Mutado",
+                color: "#000000",
+                permissions: []
+            });
+            message.guild.channels.forEach(async (channel, id) =>{
+                await channel.overwritePermissions(muterole, {
+                    SEND_MESSAGES: false,
+                    ADD_REACTION: false,
+                    CONNECT: false
+                });
+            });
+        } catch (a) {
+            console.error(a.stack);
+        }
+    }
+    
+    member.addRole(muterole)
+
+    const emojizoioban = client.guilds.get("420316735149965322").emojis.find("name", "zoioBAN");
+    const mutemsg = new Discord.RichEmbed()
+        .setTitle(`${message.author.tag} | Mutado`)
+        .setDescription(`Você foi mutado no servidor **${message.guild.name}**! :worried:`)
+        .setColor("#aa0303")
+        .setThumbnail(member.user.avatarURL)
+        .addField("📋 Motivo:", motivo)
+        .setTimestamp()
+        .setFooter("© Kally Moderação")
+     
+      
+    const mutado = new Discord.RichEmbed()
+        .setTitle(`${message.author.tag} | Mutado`)
+        .setDescription(`**${member.user.username}** foi mutado no servidor! :worried:`)
+        .setColor("#aa0303")
+        .setThumbnail(message.author.avatarURL)
+        .addField("👮 Por:", message.author)
+        .addField("📋 Motivo:", motivo)
+        .setTimestamp()
+        .setFooter("© Kally Moderação - k!convite")
         
-        const mutado = new Discord.RichEmbed()
-           .setAuthor(member.user.tag + ' | Mute', member.user.avatarURL)
-           .setDescription(`${member.user.tag} (ID: ${member.user.id}) não respeitou as regras e foi mutado! :pensive: `)
-           .setColor("ff0000")
-
-           .setThumbnail(message.author.avatarURL)
-
-           .setTimestamp()
-           .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
-
-           .addField("Motivo:", motivo)
-
-           .addField("Staffer:", message.author)
-        
-        message.channel.send(mutado)
-     }
+    if(message.guild.channels.find("name", "punidos")){
+        let guild = message.guild.channels.find("name", "punidos");   
+        guild.send(mutado).catch(O_o=>{});
+        member.send(mutemsg).catch(O_o=>{});
+        message.channel.send(`:white_check_mark: | ${message.author} usuário punido com sucesso!`)
+    }else if(message.guild.channels.find("name", "🚫punidos")){
+        let guild = message.guild.channels.find("name", "🚫punidos");
+        guild.send(mutado).catch(O_o=>{});
+        member.send(mutemsg).catch(O_o=>{});
+        message.channel.send(`:white_check_mark: | ${message.author} usuário punido com sucesso!`)
+    } else if(message.guild.channels.find("name", "punições")){
+        let guild = message.guild.channels.find("name", "punições");
+        guild.send(mutado).catch(O_o=>{});
+        member.send(mutemsg).catch(O_o=>{});
+        message.channel.send(`:white_check_mark: | ${message.author} usuário punido com sucesso!`)
+    }else if(message.guild.channels.find("name", "🚫punições")){
+        let guild = message.guild.channels.find("name", "🚫punições");
+        guild.send(mutado).catch(O_o=>{});
+        member.send(mutemsg).catch(O_o=>{});
+        message.channel.send(`:white_check_mark: | ${message.author} usuário punido com sucesso!`)
     } else {
-        message.reply("você não tem permissão! :x:").then(msg => msg.delete(5000));
+        guild.send(mutado).catch(O_o=>{});
+        member.send(mutemsg).catch(O_o=>{});
     }
 }
