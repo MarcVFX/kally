@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) =>{
       
     const emojizoioban = client.guilds.get("420316735149965322").emojis.find("name", "zoioBAN");
     const banmsg = new Discord.RichEmbed()
-        .setTitle(`${message.author.tag} | Banido`)
+        .setTitle(`${member.user.tag} | Banido`)
         .setDescription(`Você foi banido do servidor **${message.guild.name}**! ${emojizoioban}`)
         .setColor("#aa0303")
         .setThumbnail(member.user.avatarURL)
@@ -37,8 +37,8 @@ module.exports.run = async (client, message, args) =>{
      
       
     const banido = new Discord.RichEmbed()
-        .setTitle(`${message.author.tag} | Banido`)
-        .setDescription(`**${member.user.username}** foi banido do servidor! ${emojizoioban}`)
+        .setTitle(`$member.user.tag} | Banido`)
+        .setDescription(`**${member.user.tag}** foi banido do servidor! ${emojizoioban}`)
         .setColor("#aa0303")
         .setThumbnail(message.author.avatarURL)
         .addField("👮 Por:", message.author)
