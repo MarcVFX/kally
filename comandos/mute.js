@@ -44,7 +44,7 @@ module.exports.run = async (client, message, args) =>{
 
     const emojizoioban = client.guilds.get("420316735149965322").emojis.find("name", "zoioBAN");
     const mutemsg = new Discord.RichEmbed()
-        .setTitle(`${message.author.tag} | Mutado`)
+        .setTitle(`${member.user.tag} | Mutado`)
         .setDescription(`Você foi mutado no servidor **${message.guild.name}**! :worried:`)
         .setColor("#aa0303")
         .setThumbnail(member.user.avatarURL)
@@ -54,8 +54,8 @@ module.exports.run = async (client, message, args) =>{
      
       
     const mutado = new Discord.RichEmbed()
-        .setTitle(`${message.author.tag} | Mutado`)
-        .setDescription(`**${member.user.username}** foi mutado no servidor! :worried:`)
+        .setTitle(`${member.user.tag} | Mutado`)
+        .setDescription(`**${member.user.tag}** foi mutado no servidor! :worried:`)
         .setColor("#aa0303")
         .setThumbnail(message.author.avatarURL)
         .addField("👮 Por:", message.author)
