@@ -42,7 +42,7 @@ module.exports.run = async (client, message, args) =>{
 
     const emojizoioban = client.guilds.get("420316735149965322").emojis.find("name", "zoioBAN");
     const desmutemsg = new Discord.RichEmbed()
-        .setTitle(`${message.author.tag} | Desmutado`)
+        .setTitle(`${member.user.tag} | Desmutado`)
         .setDescription(`Você foi desmutado no servidor **${message.guild.name}**! :smiley:`)
         .setColor("#aa0303")
         .setThumbnail(member.user.avatarURL)
@@ -51,8 +51,8 @@ module.exports.run = async (client, message, args) =>{
      
       
     const desmutado = new Discord.RichEmbed()
-        .setTitle(`${message.author.tag} | Desmutado`)
-        .setDescription(`**${member.user.username}** foi desmutado no servidor! :smiley:`)
+        .setTitle(`$member.user.tag} | Desmutado`)
+        .setDescription(`**${member.user.tag}** foi desmutado no servidor! :smiley:`)
         .setColor("#aa0303")
         .setThumbnail(message.author.avatarURL)
         .addField("👮 Por:", message.author)
