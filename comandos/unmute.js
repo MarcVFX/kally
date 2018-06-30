@@ -51,7 +51,7 @@ module.exports.run = async (client, message, args) =>{
      
       
     const desmutado = new Discord.RichEmbed()
-        .setTitle(`$member.user.tag} | Desmutado`)
+        .setTitle(`${member.user.tag} | Desmutado`)
         .setDescription(`**${member.user.tag}** foi desmutado no servidor! :smiley:`)
         .setColor("#aa0303")
         .setThumbnail(message.author.avatarURL)
