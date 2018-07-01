@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) =>{
     const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!mute")
-      .setDescription(`Irá banir o usuário mencionado.`)
+      .setDescription(`Irá mutar o usuário mencionado.`)
       .setColor("#22a7cc")
       .setFooter("© Kally - k!convite - kally.glitch.me")
       .addField("Como usar:", "`k!mute @usuário <motivo>`\n`k!mute @LockDzn#8368 Flood`")
