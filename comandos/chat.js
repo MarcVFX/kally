@@ -9,9 +9,9 @@ module.exports.run = async (client, message, args) =>{
         .setTitle("k!chat")
         .setDescription(`Irá mutar ou desmutar o chat.`)
         .setColor("#60d1f6")
-        .setFooter("© Kally - kally.glitch.me")
-        .addField("Como usar", "`k!chat <on/off>`")
-        .addField("Permissão", "O staff que for usar o comando tem que esta em um cargo com a permissão `Gerenciar mensagens`")
+        .setFooter("© Kally - k!convite - kally.glitch.me")
+        .addField("Como usar:", "`k!chat <on/off>`")
+        .addField("Permissão:", "O staff que for usar o comando tem que esta em um cargo com a permissão `Gerenciar mensagens`")
     let mensg = args.join(" ");
     if(!mensg)
         return message.channel.send(message.author, comousar).then(msg => msg.delete(10000));
