@@ -10,10 +10,10 @@ module.exports.run = async (client, message, args) =>{
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!limpar")
       .setDescription(`Irá limpar o número de mensagens escolhido.`)
-      .setColor("#60d1f6")
-      .setFooter("© Kally - kally.glitch.me")
-      .addField("Como usar", "`k!limpar <número maior que 2 e menor que 100>`")
-      .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Gerenciar mensagens`")
+      .setColor("#22a7cc")
+      .setFooter("© Kally - k!convite - kally.glitch.me")
+      .addField("Como usar:", "`k!limpar <número maior que 2 e menor que 100>`\n`k!limpar 57`")
+      .addField("Permissão:", "O staff que for mutar tem que esta em um cargo com a permissão `Gerenciar mensagens`")
 
    const num = args.join(" ");
 
