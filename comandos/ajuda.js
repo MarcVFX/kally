@@ -49,7 +49,7 @@ module.exports.run = async (client, message, args) =>{
 **${prefix}setcargo** \`@usuário e nome do cargo\` - Irá adicionar o cargo ao usuário mencionado.
 **${prefix}removercargo** \`@usuário e nome do cargo\` - Irá remover o cargo do usuário mencionado.
 **${prefix}userinfo** \`@usuário\` - Irá mostrar as informações do usuário mencionado.
-**${prefix}say** \`mensagem\` - Ira mandar uma mensagem em embed.`)
+**${prefix}say** \`mensagem\` - Irá mandar uma mensagem em embed.`)
                 .setThumbnail("https://i.imgur.com/lEI7Gm6.gif")
                 .setColor("#00f782")
                 .setFooter("© Kally Outros")
