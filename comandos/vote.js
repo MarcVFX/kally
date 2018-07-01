@@ -10,11 +10,11 @@ module.exports.run = async (client, message, args) =>{
     const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!vote")
-      .setDescription(`Ira abrir uma votação no canal que a mensagem foi executada.`)
-      .setColor("#60d1f6")
-      .setFooter("© Kally - kally.glitch.me")
-      .addField("Como usar", "`k!vote <mensagem da votação>`")
-      .addField("Permissão", "O staff que for usar o comando tem que esta em um cargo com a permissão `Gerenciar servidor`")
+      .setDescription(`Irá abrir uma votação no canal que a mensagem foi executada.`)
+      .setColor("#22a7cc")
+      .setFooter("© Kally - k!convite - kally.glitch.me")
+      .addField("Como usar:", "`k!vote <mensagem da votação>`")
+      .addField("Permissão:", "O staff que for usar o comando tem que esta em um cargo com a permissão `Gerenciar servidor`")
    
     let mensg = args.join(" ");
     if(!mensg)
