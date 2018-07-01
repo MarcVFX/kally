@@ -8,10 +8,10 @@ module.exports.run = async (client, message, args) =>{
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!unmute")
       .setDescription(`Irá desmutar o usuário mencionado.`)
-      .setColor("#60d1f6")
-      .setFooter("© Kally - kally.glitch.me")
-      .addField("Como usar", "`k!unmute @usuário`")
-      .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Gerenciar Mensagens`")
+      .setColor("#22a7cc")
+      .setFooter("© Kally - k!convite - kally.glitch.me")
+      .addField("Como usar:", "`k!unmute @usuário`\n`k!unmute @LockDzn#8368`")
+      .addField("Permissão:", "O staff que for mutar tem que esta em um cargo com a permissão `Gerenciar Mensagens`")
     let member = message.mentions.members.first();
     if(!member)
         return message.channel.send(message.author, comousar).then(msg => msg.delete(10000));
