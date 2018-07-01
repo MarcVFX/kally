@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) =>{
         .setAuthor("Kally", client.user.avatarURL)
         .setTitle("k!chat")
         .setDescription(`Irá mutar ou desmutar o chat.`)
-        .setColor("#60d1f6")
+        .setColor("#22a7cc")
         .setFooter("© Kally - k!convite - kally.glitch.me")
         .addField("Como usar:", "`k!chat <on/off>`")
         .addField("Permissão:", "O staff que for usar o comando tem que esta em um cargo com a permissão `Gerenciar mensagens`")
