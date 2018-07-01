@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) =>{
 
-    if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("você não tem permissão! :x:").then(msg => msg.delete(5000));
+    const emojinop = client.guilds.get("420316735149965322").emojis.find("name", "KallyNop");
+    if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply(`você não tem permissão! ${emojinop}`).then(msg => msg.delete(5000));
     message.delete().catch(O_o=>{});
     const comousar = new Discord.RichEmbed()
         .setAuthor("Kally", client.user.avatarURL)
