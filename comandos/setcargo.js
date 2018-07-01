@@ -7,12 +7,12 @@ module.exports.run = async (client, message, args) =>{
     const comousar = new Discord.RichEmbed()
        .setAuthor("Kally", client.user.avatarURL)
        .setTitle("k!setcargo")
-       .setDescription(`Ira adicionar o cargo ao usuário mencionado.`)
-       .setColor("#60d1f6")
-       .setFooter("© Kally - kally.glitch.me")
-       .addField("Como usar", "`k!setcargo @usuário <nome do cargo>`")
-       .addField("Permissão", "O staff que for adicinar o cargo tem que está em um cargo com a permissão `Gerenciar cargos`")
-       .addField("Info", "A **minha** permissão tem que está **acima dos cargos** que eu vou adicionar!")
+       .setDescription(`Irá adicionar o cargo ao usuário mencionado.`)
+       .setColor("#22a7cc")
+       .setFooter("© Kally - k!convite - kally.glitch.me")
+       .addField("Como usar:", "`k!setcargo @usuário <nome do cargo>`\n`k!setcargo @LockDzn#8368 ⚒ Desenvolvedor`")
+       .addField("Permissão:", "O staff que for adicinar o cargo tem que está em um cargo com a permissão `Gerenciar cargos`")
+       .addField("Info:", "A **minha** permissão tem que está **acima dos cargos** que eu vou adicionar!")
    let member = message.mentions.members.first();
    if(!member)
     return message.channel.send(comousar).then(msg => msg.delete(10000));
