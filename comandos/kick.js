@@ -8,8 +8,8 @@ module.exports.run = async (client, message, args) =>{
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!kick")
       .setDescription(`Irá kikar o usuário mencionado.`)
-      .setColor("#60d1f6")
-      .setFooter("© Kally - kally.glitch.me")
+      .setColor("#22a7cc")
+      .setFooter("© Kally - k!convite - kally.glitch.me")
       .addField("Como usar", "`k!kick @usuário <motivo>`")
       .addField("Permissão", "O staff que for kikar tem que está em um cargo com a permissão `Expulsar membros`")
      let member = message.mentions.members.first();
