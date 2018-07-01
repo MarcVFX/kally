@@ -3,11 +3,12 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args) =>{
 
     message.delete().catch(O_o=>{});
-    if(!message.member.hasPermission('KICK_MEMBERS')) return message.reply("você não tem permissão! :x:").then(msg => msg.delete(6000));
+    const emojinop = client.guilds.get("420316735149965322").emojis.find("name", "KallyNop");
+    if(!message.member.hasPermission('KICK_MEMBERS')) return message.reply(`você não tem permissão! ${emojinop}`).then(msg => msg.delete(6000));
     const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!kick")
-      .setDescription(`Irá kikar o usuário mencionado.`)
+      .setDescription(`Irá expulsar o usuário mencionado.`)
       .setColor("#22a7cc")
       .setFooter("© Kally - k!convite - kally.glitch.me")
       .addField("Como usar", "`k!kick @usuário <motivo>`")
