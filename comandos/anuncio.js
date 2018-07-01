@@ -10,12 +10,12 @@ module.exports.run = async (client, message, args) =>{
    const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!anuncio")
-      .setDescription(`Ira mandar um anúncio no chat que o comandos foi executado.`)
-      .setColor("#60d1f6")
+      .setDescription(`Irá mandar um anúncio no chat que o comandos foi executado.`)
+      .setColor("##22a7cc")
       .setFooter("© Kally - kally.glitch.me")
-      .addField("Como usar", "`k!anuncio <mensagem do anúncio>`")
-      .addField("Permissão", "O staff que for usar o comando tem que esta em um cargo com a permissão `Gerenciar servidor`")
-      .addField("Como mudar a cor do anúncio?", "Simples, para escolher a cor do anúncio só você mudar a cor do cargo **"+ kallyrole +"** (O cargo do Kally), se quiser uma cor aleatória só deixar na cor"+` "Padrão."`)   
+      .addField("Como usar:", "`k!anuncio <mensagem do anúncio>`")
+      .addField("Permissão:", "O staff que for usar o comando tem que esta em um cargo com a permissão `Gerenciar servidor`")
+      .addField("Como mudar a cor do anúncio:", "Simples, para escolher a cor do anúncio só você mudar a cor do cargo **"+ kallyrole +"** (O cargo do Kally), se quiser uma cor aleatória só deixar na cor"+` "Padrão."`)   
       
    let mensg = args.join(" ");
    if(!mensg)
