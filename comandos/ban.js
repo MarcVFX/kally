@@ -38,7 +38,7 @@ module.exports.run = async (client, message, args) =>{
      
       
     const banido = new Discord.RichEmbed()
-        .setTitle(`$member.user.tag} | Banido`)
+        .setTitle(`${member.user.tag} | Banido`)
         .setDescription(`**${member.user.tag}** foi banido do servidor! ${emojizoioban}`)
         .setColor("#aa0303")
         .setThumbnail(message.author.avatarURL)
