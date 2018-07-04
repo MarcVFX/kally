@@ -113,7 +113,7 @@ var msg = message.content.toUpperCase();
 var cont = message.content.slice(prefix.lenght).split('');
   
 if(message.channel.type === "dm"){
-	message.author.send("Acho que você precisa ser internado, pois está falando com um bot!\n\nPara executar um comando meu use um servidor que eu esteja!")
+	message.author.send("Para executar um comando meu use um servidor que eu esteja!")
 	const convite = new Discord.RichEmbed()
 		.setColor("#1297f0")
 		.setAuthor("Convite", client.user.avatarURL)
