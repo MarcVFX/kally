@@ -112,7 +112,15 @@ var autor = message.author;
 var msg = message.content.toUpperCase();
 var cont = message.content.slice(prefix.lenght).split('');
   
-if(message.channel.type === "dm") return;
+if(message.channel.type === "dm"){
+	message.author.send("Acho que você precisa ser internado, pois está falando com um bot!\n\nPara executar um comando meu use um servidor que eu esteje!")
+	const convite = new Discord.RichEmbed()
+		.setColor("#1297f0")
+		.setAuthor("Convite", client.user.avatarURL)
+		.addField("Convite para servidor de suporte do Kally:", "https://discord.gg/fsSNJJH")
+		.addField("Invite para colocar o Kally no seu servidor:", "https://kally.glitch.me/invite.html")
+	message.author.send(convite).catch(O_o=>{});
+}
 if(!message.content.startsWith(prefix)) return;
 // ban
 //if(message.author.id === "244537374258888725" || message.author.id === "244537374258888725") return;
