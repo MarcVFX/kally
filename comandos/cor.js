@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) =>{
    let role4 = message.guild.roles.find("id", "430908852196737034");
    const categoria = new Discord.RichEmbed()
     .setTitle("Escolha uma cor...")
-    .setDescription(`\n\n${emojicor1} **Cor azul**\n${emojicor2} **Cor amarela**\n${emojicor3} **Cor vermelha**\n${emojicor4} **Cor Roxa**\n\n*Por favor escolha uma cor só!*`)
+    .setDescription(`\n\n${emojicor1} **Cor azul**\n${emojicor2} **Cor amarela**\n${emojicor3} **Cor vermelha**\n${emojicor4} **Cor Roxa**\n\n*Por favor escolha uma cor só!*\n*Se quiser retirar uma cor, só reagir a mesma!*`)
     .setColor("#36393e")
     .setFooter(`Por: ${message.author.tag}`, message.author.avatarURL)
    const emojicarregando = client.guilds.get("420316735149965322").emojis.find("name", "KallyCarregando");
@@ -37,24 +37,48 @@ module.exports.run = async (client, message, args) =>{
 
         num1l.on('collect', r=> {
             msg.delete();
+            if(message.member.roles.some(r=>[role1.id].includes(r.id))){
+                message.author.send(`Você já tinha o cargo ${emojicor1}! ${emojicarregando}`)
+                message.member.removeRole(role1)
+                message.author.send(`Cargo retirado!`)
+                return;
+            }
             message.author.send(`Você escolheu a cor ${emojicor1}! ${emojicarregando}`)
             message.member.addRole(role1)
             message.author.send(`Cargo setado!`)
         })
         num2l.on('collect', r=> {
             msg.delete();
+            if(message.member.roles.some(r=>[role2.id].includes(r.id))){
+                message.author.send(`Você já tinha o cargo ${emojicor2}! ${emojicarregando}`)
+                message.member.removeRole(role2)
+                message.author.send(`Cargo retirado!`)
+                return;
+            }
             message.author.send(`Você escolheu a cor ${emojicor2}! ${emojicarregando}`)
             message.member.addRole(role2)
             message.author.send(`Cargo setado!`)
         })
         num3l.on('collect', r=> {
             msg.delete();
+            if(message.member.roles.some(r=>[role3.id].includes(r.id))){
+                message.author.send(`Você já tinha o cargo ${emojicor3}! ${emojicarregando}`)
+                message.member.removeRole(role3)
+                message.author.send(`Cargo retirado!`)
+                return;
+            }
             message.author.send(`Você escolheu a cor ${emojicor3}! ${emojicarregando}`)
             message.member.addRole(role3)
             message.author.send(`Cargo setado!`)
         })
         num4l.on('collect', r=> {
             msg.delete();
+            if(message.member.roles.some(r=>[role4.id].includes(r.id))){
+                message.author.send(`Você já tinha o cargo ${emojicor4}! ${emojicarregando}`)
+                message.member.removeRole(role4)
+                message.author.send(`Cargo retirado!`)
+                return;
+            }
             message.author.send(`\nVocê escolheu a cor ${emojicor4}! ${emojicarregando}`)
             message.member.addRole(role4)
             message.author.send(`Cargo setado!`)
