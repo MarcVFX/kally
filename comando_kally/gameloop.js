@@ -21,8 +21,6 @@ module.exports.run = async (client) =>{
         client.user.setPresence({ game: { name: `📩 Me adicione em seu servidor https://kally.glitch.me/invite.html`, url: "https://twitch.tv/LockDzn", type: 2} });
         await sleep(60000)
         client.user.setPresence({ game: { name: `❓ Precisando de ajuda? https://discord.gg/fsSNJJH`, url: "https://twitch.tv/LockDzn", type: 3} });
-        await sleep(60000)
-        client.user.setPresence({ game: { name: `vai Brasil 🇧🇷`, url: "https://twitch.tv/LockDzn", type: 1} });
     }
    
 
