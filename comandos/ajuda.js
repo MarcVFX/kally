@@ -27,9 +27,10 @@ module.exports.run = async (client, message, args) =>{
 \n**${prefix}mute** \`@usuário e motivo\` - Irá mutar o usuário mencionado.
 **${prefix}unmute** \`@usuário\` - Irá desmutar o usuário mencionado.
 **${prefix}ban** \`@usuário e motivo\` - Irá banir o usuário mencionado do seu servidor do discord.
+**${prefix}softban** \`@usuário e motivo\` - Irá banir e desbanir o usuário mencionado e deletar as mensagens dos últimos 7 dias desse usuário.
+**${prefix}kick** \`@usuário e motivo\` - Irá kickar o usuário mencionado.
 **${prefix}anuncio** \`mensagem do anuncio\` - Irá mandar um anuncio no chat que o comandos foi executado.
 **${prefix}limpar** \`número de mensagens\` - Irá limpar o número de mensagens escolhido.
-**${prefix}kick** \`@usuário e motivo\` - Irá kickar o usuário mencionado.
 **${prefix}aviso** \`@usuário e motivo\` - Irá avisar o usuário mencionado.
 **${prefix}chat** \`<on ou off>\` - Irá mutar ou desmutar o chat.`)
             .setThumbnail("https://i.imgur.com/ZmWM1UT.png")
