@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) =>{
     message.reply(`enviei para você no privado, veja suas mensagens diretas! ${emojicarregando}`).then(msg => msg.delete(6000));
     const ajuda1 = new Discord.RichEmbed()
        .setAuthor(`Ajudinha do Kally`)
-       .setDescription(`Olá, ${message.author}, sou um simples bot de moderação que pode ajuda seu servidor, irei te mandar os meus comandos...`)
+       .setDescription(`Olá, ${message.author}, sou um simples bot de moderação que pode ajudar seu servidor, irei te mandar os meus comandos...`)
        .addField(":question: Suporte:", `https://discord.gg/fsSNJJH`)
        .addField(":computer: Site:", `https://kally.glitch.me`)
        .addField(":computer: Para me adicinar:", `https://kally.glitch.me/invite.html`)
