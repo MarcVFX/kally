@@ -81,7 +81,7 @@ module.exports.run = async (client, message, args) =>{
         member.send(desmutemsg).catch(O_o=>{});
         message.channel.send(`:white_check_mark: | ${message.author} usuário despunido com sucesso!`)
     } else {
-        guild.send(desmutado).catch(O_o=>{});
+        message.channel.send(desmutado).catch(O_o=>{});
         member.send(desmutemsg).catch(O_o=>{});
     }
 }
