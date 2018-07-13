@@ -68,7 +68,7 @@ module.exports.run = async (client, message, args) =>{
         member.send(kickmsg).catch(O_o=>{})
         message.channel.send(`:white_check_mark: | ${message.author} usuário punido com sucesso!`)
     } else {
-        guild.send(kikado).catch(O_o=>{});
+        message.channel.send(kikado).catch(O_o=>{});
         member.send(kickmsg).catch(O_o=>{})
     }
 }
