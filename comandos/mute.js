@@ -84,7 +84,7 @@ module.exports.run = async (client, message, args) =>{
         member.send(mutemsg).catch(O_o=>{});
         message.channel.send(`:white_check_mark: | ${message.author} usuário punido com sucesso!`)
     } else {
-        guild.send(mutado).catch(O_o=>{});
+        message.channel.send(mutado).catch(O_o=>{});
         member.send(mutemsg).catch(O_o=>{});
     }
 }
