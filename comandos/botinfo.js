@@ -27,8 +27,8 @@ module.exports.run = async (client, message, args) =>{
    
       .addField(":question: Suporte", `https://discord.gg/fsSNJJH`)
       .addField(":computer: Site", `https://kally.glitch.me`)
-      .addField(":heart: Melhores pessoas:", `**${dono}** Foi ele que me criou! :grin:\n**${message.author}** Por estar falando comigo! :smile: `)
-      .setFooter("Kally foi criado por LockDzn - Site: bit.ly/LockDzn", dono.user.avatarURL)
+      .addField(":heart: Criador", `LockDzn#8368 Foi ele que me criou! Twitter dele, é só [clicar aqui](https://twitter.com/intent/user?screen_name=@LockDzn_)`)
+      .setFooter("bit.ly/LockDzn", dono.user.avatarURL)
    
    message.channel.send(info)
    
