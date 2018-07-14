@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) =>{
    
       .addField(":question: Suporte", `https://discord.gg/fsSNJJH`)
       .addField(":computer: Site", `https://kally.glitch.me`)
-      .addField(":heart: Criador", `\`LockDzn#8368\` Foi ele que me criou! Twitter dele, é só [clicar aqui](https://twitter.com/intent/user?screen_name=@LockDzn_)`)
+      .addField(":heart: Criador", `\`LockDzn#8368\` Foi ele que me criou! Twitter dele é [@LockDzn_](https://twitter.com/intent/user?screen_name=@LockDzn_)`)
       .setFooter("bit.ly/LockDzn", dono.user.avatarURL)
    
    message.channel.send(info)
