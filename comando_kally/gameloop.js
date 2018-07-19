@@ -16,7 +16,7 @@ module.exports.run = async (client) =>{
         const channel = client.channels.get("469640631694786570");
 		channel.setName(`🏓 Ping: ${Math.round(client.ping)}`)
         await sleep(60000)
-        client.user.setPresence({ game: { name: "k!ajuda | k!convite", type: 0 } });]
+        client.user.setPresence({ game: { name: "k!ajuda | k!convite", type: 0 } });
         const channel = client.channels.get("469640631694786570");
 		channel.setName(`🏓 Ping: ${Math.round(client.ping)}`)
         await sleep(60000)
