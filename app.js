@@ -38,6 +38,8 @@ client.on("guildCreate", guild => {
 			.setFooter(`Agora estou em ${client.guilds.size} servidores!`)
 		
 		client.channels.get("458341973955313675").send(entrei);
+		const channel = member.guild.channels.get("469640239904980992");
+		channel.setName(`Servidores: ${client.guilds.size}`)
 		const adms = guild.members.filter(r => r.hasPermission('MANAGE_GUILD')).map(pessoa => `${pessoa.id}`)
     		for(var c in adms){
         		const adm = guild.members.get(adms[c]);
