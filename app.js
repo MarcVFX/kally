@@ -39,7 +39,7 @@ client.on("guildCreate", guild => {
 		
 		client.channels.get("458341973955313675").send(entrei);
 		const channel = client.channels.get("469640239904980992");
-		channel.setName(`📟 Servidores: ${client.guilds.size}`)
+		channel.setName(`📟 | Servidores: ${client.guilds.size}`)
 		const adms = guild.members.filter(r => r.hasPermission('MANAGE_GUILD')).map(pessoa => `${pessoa.id}`)
     		for(var c in adms){
         		const adm = guild.members.get(adms[c]);
@@ -64,7 +64,7 @@ client.on("guildDelete", guild => {
  
 	  client.channels.get("458341973955313675").send(entrei);
 	  const channel = client.channels.get("469640239904980992");
-	  channel.setName(`📟 Servidores: ${client.guilds.size}`)
+	  channel.setName(`📟 | Servidores: ${client.guilds.size}`)
 });
 
 
