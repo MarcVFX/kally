@@ -32,14 +32,21 @@ client.on("guildCreate", guild => {
 		const entrei = new Discord.RichEmbed()
 			.setAuthor(`${guild.name} | Adicionado`)
 			.setDescription(`Entrei no servidor **${guild.name}** (id: ${guild.id})`)
-			.addField("Membros", `Com **${guild.memberCount}** membros`)
-			.addField("Dono", `${guild.owner.user.tag} (ID: ${guild.owner.id})`)
+			.addField(":busts_in_silhouette: Membros", `Com **${guild.memberCount - guild.members.filter(m=>m.user.bot).size}** membro(s) e **${guild.members.filter(m=>m.user.bot).size}** bot(s)`)
+			.addField(":crown: Dono", `**${guild.owner.user.tag}** (ID: ${guild.owner.id})`)
 			.setColor("00e7ff")
-			.setFooter(`Agora estou em ${client.guilds.size} servidores!`, guild.owner.avatarURL)
-  
-	
-	 	client.channels.get("458341973955313675").send(entrei);
-	
+			.setFooter(`Agora estou em ${client.guilds.size} servidores!`)
+		
+		client.channels.get("458341973955313675").send(entrei);
+		const adms = guild.members.filter(r => r.hasPermission('MANAGE_GUILD')).map(pessoa => `${pessoa.id}`)
+    		for(var c in adms){
+        		const adm = guild.members.get(adms[c]);
+        		adm.send(`Olá ${adm}, tudo bem? eu sou o Kally, um bot para a moderação de servidores do discord!\n
+Não sei se foi você ou outra pessoa que me adicionou no servidor \`${guild.name}\`, mas agora estou nesse servidor.\n
+Meu prefix é \`k!\` e para saber meus comandos digite \`k!ajuda\` em seu servidor, desde já agradeço por usar o Kally.\n
+**•** Meu site: http://kally.glitch.me/
+**•** Meu servidor de suporte: https://discord.gg/fsSNJJH`).catch(O_o=>{});
+    		}
 	}
 });
 
@@ -47,10 +54,10 @@ client.on("guildDelete", guild => {
   const entrei = new Discord.RichEmbed()
      .setAuthor(`${guild.name} | Removido`)
      .setDescription(`Fui removido do servidor **${guild.name}** (ID: ${guild.id})!`)
-     .addField("Membros", `Com **${guild.memberCount}** membros`)
-     .addField("Dono", `${guild.owner.user.tag} (ID: ${guild.owner.id})`)
+     .addField(":busts_in_silhouette: Membros", `Com **${guild.memberCount - guild.members.filter(m=>m.user.bot).size}** membro(s) e **${guild.members.filter(m=>m.user.bot).size}** bot(s)`)
+     .addField(":crown: Dono", `${guild.owner.user.tag} (ID: ${guild.owner.id})`)
      .setColor("ff0000")
-     .setFooter(`Agora estou em ${client.guilds.size} servidores!`, guild.owner.avatarURL)
+     .setFooter(`Agora estou em ${client.guilds.size} servidores!`)
   
  
   
