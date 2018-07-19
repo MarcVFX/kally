@@ -13,24 +13,15 @@ module.exports.run = async (client) =>{
     for (i=0; i<10;){
         await sleep(60000)
         client.user.setPresence({ game: { name: `para ${client.guilds.size} servidores! Muito obrigado por me usarem 😘`, url: "https://twitch.tv/LockDzn", type: 1} });
-        const channel = client.channels.get("469640631694786570");
-		channel.setName(`🏓 Ping: ${Math.round(client.ping)}`)
         await sleep(60000)
         client.user.setPresence({ game: { name: "k!ajuda | k!convite", type: 0 } });
-        const channel = client.channels.get("469640631694786570");
-		channel.setName(`🏓 Ping: ${Math.round(client.ping)}`)
         await sleep(60000)
         client.user.setPresence({ game: { name: `${client.users.size} pessoas! Muita gente 😯`, type: 3} });
-        const channel = client.channels.get("469640631694786570");
-		channel.setName(`🏓 Ping: ${Math.round(client.ping)}`)
         await sleep(60000)
         client.user.setPresence({ game: { name: `📩 Me adicione em seu servidor https://kally.glitch.me/invite`, url: "https://twitch.tv/LockDzn", type: 2} });
-        const channel = client.channels.get("469640631694786570");
-		channel.setName(`🏓 Ping: ${Math.round(client.ping)}`)
         await sleep(60000)
         client.user.setPresence({ game: { name: `❓ Precisando de ajuda? https://discord.gg/fsSNJJH`, url: "https://twitch.tv/LockDzn", type: 3} });
-        const channel = client.channels.get("469640631694786570");
-		channel.setName(`🏓 Ping: ${Math.round(client.ping)}`)
+       
     }
    
 
