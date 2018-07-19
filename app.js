@@ -38,8 +38,8 @@ client.on("guildCreate", guild => {
 			.setFooter(`Agora estou em ${client.guilds.size} servidores!`)
 		
 		client.channels.get("458341973955313675").send(entrei);
-		const channel = member.guild.channels.get("469640239904980992");
-		channel.setName(`Servidores: ${client.guilds.size}`)
+		const channel = client.channels.get("469640239904980992");
+		channel.setName(`📟 Servidores: ${client.guilds.size}`)
 		const adms = guild.members.filter(r => r.hasPermission('MANAGE_GUILD')).map(pessoa => `${pessoa.id}`)
     		for(var c in adms){
         		const adm = guild.members.get(adms[c]);
@@ -53,17 +53,18 @@ Meu prefix é \`k!\` e para saber meus comandos digite \`k!ajuda\` em seu servid
 });
 
 client.on("guildDelete", guild => {
-  const entrei = new Discord.RichEmbed()
-     .setAuthor(`${guild.name} | Removido`)
-     .setDescription(`Fui removido do servidor **${guild.name}** (ID: ${guild.id})!`)
-     .addField(":busts_in_silhouette: Membros", `Com **${guild.memberCount - guild.members.filter(m=>m.user.bot).size}** membro(s) e **${guild.members.filter(m=>m.user.bot).size}** bot(s)`)
-     .addField(":crown: Dono", `${guild.owner.user.tag} (ID: ${guild.owner.id})`)
-     .setColor("ff0000")
-     .setFooter(`Agora estou em ${client.guilds.size} servidores!`)
+	  const entrei = new Discord.RichEmbed()
+	     .setAuthor(`${guild.name} | Removido`)
+	     .setDescription(`Fui removido do servidor **${guild.name}** (ID: ${guild.id})!`)
+	     .addField(":busts_in_silhouette: Membros", `Com **${guild.memberCount - guild.members.filter(m=>m.user.bot).size}** membro(s) e **${guild.members.filter(m=>m.user.bot).size}** bot(s)`)
+	     .addField(":crown: Dono", `${guild.owner.user.tag} (ID: ${guild.owner.id})`)
+	     .setColor("ff0000")
+	     .setFooter(`Agora estou em ${client.guilds.size} servidores!`)
   
  
-  
-  client.channels.get("458341973955313675").send(entrei);
+	  const channel = client.channels.get("469640239904980992");
+	  channel.setName(`📟 Servidores: ${client.guilds.size}`)
+	  client.channels.get("458341973955313675").send(entrei);
 });
 
 
