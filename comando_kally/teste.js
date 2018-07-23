@@ -87,25 +87,25 @@ module.exports.run = async (client, message, args) =>{
     if(message.guild.channels.find("name", "punidos")){
         let guild = message.guild.channels.find("name", "punidos");   
         guild.send(aviso).catch(O_o=>{});
-        member.send(avisomsg).catch(O_o=>{});
+        member.user.send(avisomsg).catch(O_o=>{});
         message.channel.send(`:white_check_mark: | ${message.author} usuário punido com sucesso!`)
     }else if(message.guild.channels.find("name", "🚫punidos")){
         let guild = message.guild.channels.find("name", "🚫punidos");
         guild.send(aviso).catch(O_o=>{});
-        member.send(avisomsg).catch(O_o=>{});
+        member.user.send(avisomsg).catch(O_o=>{});
         message.channel.send(`:white_check_mark: | ${message.author} usuário punido com sucesso!`)
     } else if(message.guild.channels.find("name", "punições")){
         let guild = message.guild.channels.find("name", "punições");
         guild.send(aviso).catch(O_o=>{});
-        member.send(avisomsg).catch(O_o=>{});
+        member.user.send(avisomsg).catch(O_o=>{});
         message.channel.send(`:white_check_mark: | ${message.author} usuário punido com sucesso!`)
     }else if(message.guild.channels.find("name", "🚫punições")){
         let guild = message.guild.channels.find("name", "🚫punições");
         guild.send(aviso).catch(O_o=>{});
-        member.send(avisomsg).catch(O_o=>{});
+        member.user.send(avisomsg).catch(O_o=>{});
         message.channel.send(`:white_check_mark: | ${message.author} usuário punido com sucesso!`)
     } else {
         message.channel.send(aviso).catch(O_o=>{});
-        member.send(avisomsg).catch(O_o=>{});
+        member.user.send(avisomsg).catch(O_o=>{});
     }
 }
