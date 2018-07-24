@@ -5,6 +5,7 @@ let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 module.exports.run = async (client, message, args) =>{
 
     message.delete().catch(O_o=>{});
+    const emojinop = client.guilds.get("420316735149965322").emojis.find("name", "KallyNop");
     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(`você não tem permissão! ${emojinop}`).then(msg => msg.delete(6000));
     const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
