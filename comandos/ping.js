@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) =>{
                 m.delete();
                 return;
             }
-            if(Math.round(client.ping) <= 250){
+            if(Math.round(client.ping) <= 170){
                 const pingbom = new Discord.RichEmbed()
                     .setColor("4faa17")
     
@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) =>{
                 m.delete();
                 return;
             }
-            if(Math.round(client.ping) - message.createdTimestamp <= 450){
+            if(Math.round(client.ping) - message.createdTimestamp <= 320){
                 const pingruim = new Discord.RichEmbed()
                     .setColor("ffb000")
     
@@ -48,7 +48,7 @@ module.exports.run = async (client, message, args) =>{
                 m.delete();
                 return;
             }
-            if(Math.round(client.ping) - message.createdTimestamp >= 451){
+            if(Math.round(client.ping) - message.createdTimestamp >= 321){
                 const pingruim = new Discord.RichEmbed()
                     .setColor("be2727")
     
@@ -78,7 +78,7 @@ module.exports.run = async (client, message, args) =>{
             m.delete();
             return;
         }
-        if(m.createdTimestamp - message.createdTimestamp <= 250){
+        if(m.createdTimestamp - message.createdTimestamp <= 170){
             const pingbom = new Discord.RichEmbed()
                 .setColor("4faa17")
 
@@ -90,7 +90,7 @@ module.exports.run = async (client, message, args) =>{
             m.delete();
             return;
         }
-        if(m.createdTimestamp - message.createdTimestamp <= 450){
+        if(m.createdTimestamp - message.createdTimestamp <= 320){
             const pingruim = new Discord.RichEmbed()
                 .setColor("ffb000")
 
@@ -101,7 +101,7 @@ module.exports.run = async (client, message, args) =>{
             m.delete();
             return;
         }
-        if(m.createdTimestamp - message.createdTimestamp >= 451){
+        if(m.createdTimestamp - message.createdTimestamp >= 321){
             const pingruim = new Discord.RichEmbed()
                 .setColor("be2727")
 
